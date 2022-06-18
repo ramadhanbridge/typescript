@@ -15,3 +15,8 @@ let numbers: number[] = [1, 2, 3]
 // tuples
 
 let user: [number, string] = [1, 'mosh']
+
+// enums
+const enum Size { Small = 2, Medium, Large }
+let mySize: Size = Size.Small
+console.log(mySize)
