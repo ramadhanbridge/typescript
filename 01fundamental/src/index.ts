@@ -56,3 +56,20 @@ function KgToLbs(weight: number | string): number {
 KgToLbs(20)
 KgToLbs('20kg')
 
+// intersection
+
+type Draggable = {
+    drag: () => void
+}
+
+type Resizable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+    drag: () => { },
+    resize: () => { }
+}
+
