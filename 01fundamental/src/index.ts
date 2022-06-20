@@ -25,7 +25,6 @@ console.log(mySize)
 // Function
 
 function calculateTax(income: number): number {
-    let x = 2;
     if (income < 50_000)
         return income * 1.2;
     return income * 1.3
@@ -87,3 +86,15 @@ function greet(name: string | null | undefined): void {
 }
 greet(null)
 
+// optional chaining
+
+type Customer = {
+    birthaday: Date;
+}
+
+function getCustomer(id: number): Customer | null {
+    return id === 0 ? null : { birthaday: new Date() }
+}
+
+let customer = getCustomer(20)
+console.log(customer?.birthaday)
