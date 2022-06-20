@@ -25,7 +25,34 @@ console.log(mySize)
 // Function
 
 function calculateTax(income: number): number {
+    let x = 2;
     if (income < 50_000)
         return income * 1.2;
     return income * 1.3
 }
+
+calculateTax(20_000)
+
+
+// Type alias
+
+type Employee = {
+    readonly id: number, name: string
+}
+
+
+// object
+
+let employee: Employee = { id: 1, name: 'ram' }
+
+// Union Type
+
+function KgToLbs(weight: number | string): number {
+    if (typeof weight === 'number')
+        return weight * 2.2
+    else
+        return parseInt(weight) * 2.2
+}
+KgToLbs(20)
+KgToLbs('20kg')
+
