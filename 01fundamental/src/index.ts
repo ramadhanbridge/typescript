@@ -20,3 +20,10 @@ let user: [number, string] = [1, 'mosh']
 const enum Size { Small = 2, Medium, Large }
 let mySize: Size = Size.Small
 console.log(mySize)
+
+
+// Function
+
+function calculateTax(income: number): number {
+    return 0
+}
